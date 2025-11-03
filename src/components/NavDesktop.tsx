@@ -12,10 +12,7 @@ export function NavDesktop() {
           const { href, title } = route;
           return (
             <motion.li key={title} className="flex flex-col" onHoverStart={() => setHoveredItem(title)} onHoverEnd={() => setHoveredItem(null)}>
-              <a
-                href={href}
-                className="flex items-center gap-1 hover:text-neutral-300 transition-all font-semibold"
-              >
+              <a href={href} className="flex items-center gap-1 hover:text-neutral-300 transition-all font-semibold">
                 {title}
               </a>
               <div className={`border-t-3 border-blue-400 rounded-xl transition-all duration-400 ease-in-out ${hoveredItem === title ? "w-full" : "w-0"}`}></div>
