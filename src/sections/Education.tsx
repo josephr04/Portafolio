@@ -1,6 +1,6 @@
 export function Education() {
   return (
-    <div className="px-[2em] pt-10 pb-10 bg-[#0d1117] text-white flex flex-col">
+    <div id="education" className="px-[2em] pt-10 pb-10 bg-[#0d1117] text-white flex flex-col">
         <div className="flex flex-col items-center justify-center mb-8">
           <div className="text-center text-3xl font-bold mb-2">Education</div>
           <div className="h-1 bg-linear-to-r from-blue-400 to-purple-500 rounded-xl w-12"></div>

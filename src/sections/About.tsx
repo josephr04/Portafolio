@@ -1,7 +1,7 @@
 
 export function About() {
   return(
-    <div className='px-[1em] pt-10 pb-10 text-white flex flex-col items-center justify-center'>
+    <div id="about" className='px-[2em] pt-10 pb-10 text-white flex flex-col items-center justify-center'>
       <div className="flex flex-col items-center justify-center mb-8">
         <div className="text-center text-3xl font-bold mb-2">About Me</div>
         <div className="h-1 bg-linear-to-r from-blue-400 to-purple-500 rounded-xl w-12"></div>
