@@ -3,8 +3,10 @@ import { NavBar } from './components/NavBar'
 import { Header } from './sections/Header';
 import { About } from './sections/About';
 import { Skills } from './sections/Skills';
-import { Education } from './sections/Education';
 import { Projects } from './sections/Projects';
+import { Experience } from './sections/Experience';
+import { ScrollProgressBar } from './components/ScrollProgressBar';
+import { Footer } from './components/Footer';
 
 function App() {
 
@@ -12,11 +14,13 @@ function App() {
     <>
       <div className=''>
         <NavBar />
+        <ScrollProgressBar />
         <Header />
         <About />
-        <Education />
-        <Skills />
+        <Experience />
         <Projects />
+        <Skills />
+        <Footer />
       </div>
     </>
   )

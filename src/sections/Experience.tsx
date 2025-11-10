@@ -27,7 +27,7 @@ export function Experience() {
               <p className="text-gray-300 leading-relaxed mb-5 relative z-10">{experience.description}</p>
               <div className="flex flex-wrap gap-2 relative z-10">
                 {experience.skills.map((skill) => (
-                  <span key={skill} className="bg-blue-400/15 text-blue-200 px-4 py-2 rounded-lg text-sm font-medium border border-blue-500/30 transition-all hover:bg-blue-500/30 hover:-translate-y-1">{skill}</span>
+                  <span key={skill} className="bg-blue-400/15 text-blue-200 px-4 py-2 rounded-lg text-sm font-medium border border-blue-500/30 transition-all hover:bg-blue-500/30 hover:-translate-y-1 cursor-default">{skill}</span>
                 ))}
               </div>
           </div>

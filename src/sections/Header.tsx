@@ -26,7 +26,7 @@ export function Header() {
         I build robust, scalable applications using modern technologies and best practices. 
       </div>
       <div className='mt-8'>
-        <a href='#' className='inline-block rounded-lg bg-blue-400 py-3 px-5 w-[150px] text-center font-semibold cursor-pointer hover:brightness-90 hover:-translate-y-0.5 transition-transform duration-200 ease-in-out'>Download CV</a>
+        <a href='#' className='inline-block rounded-lg bg-blue-400 py-3 px-5 w-[150px] text-center font-semibold cursor-pointer hover:brightness-90 hover:-translate-y-1 transition-transform duration-300 ease-in-out'>Download CV</a>
       </div>
       <div className='flex gap-4 items-center mt-6'>
         <a href="https://www.linkedin.com/in/joseph-rosas-595a15371" rel="noopener noreferrer" target="_blank">
