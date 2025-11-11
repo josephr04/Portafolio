@@ -7,6 +7,7 @@ import { Projects } from './sections/Projects';
 import { Experience } from './sections/Experience';
 import { ScrollProgressBar } from './components/ScrollProgressBar';
 import { Footer } from './components/Footer';
+import { Contact } from './sections/Contact';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <Experience />
         <Projects />
         <Skills />
+        <Contact />
         <Footer />
       </div>
     </>
