@@ -4,8 +4,8 @@ export function Skills() {
   return(
     <div id="skills" className="px-[2em] pt-10 pb-10 bg-[#0d1117] text-white flex flex-col">
       <div className="flex flex-col items-center justify-center mb-8">
-        <div className="text-center text-3xl font-bold mb-2">Skills</div>
-        <div className="h-1 bg-linear-to-r from-blue-400 to-purple-500 rounded-xl w-12"></div>
+        <div className="text-center text-4xl md:text-5xl font-bold mb-2">Skills</div>
+        <div className="h-1 bg-linear-to-r from-blue-400 to-purple-500 rounded-xl w-20"></div>
       </div>
         <div className="flex-col flex gap-6">
           {Object.entries(skillCategory).map(([category, skills]) => (
