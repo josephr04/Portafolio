@@ -83,7 +83,6 @@ export function Contact() {
             
             <div className="space-y-4">
               <div>
-                <label className="block text-sm text-gray-400 mb-2">Name</label>
                 <input
                   type="text"
                   placeholder="Your name"
@@ -93,7 +92,6 @@ export function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm text-gray-400 mb-2">Email</label>
                 <input
                   type="email"
                   placeholder="Your email"
@@ -103,7 +101,6 @@ export function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm text-gray-400 mb-2">Subject</label>
                 <input
                   type="text"
                   placeholder="Your subject"
@@ -113,7 +110,6 @@ export function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm text-gray-400 mb-2">Message</label>
                 <textarea 
                   placeholder="Your message"
                   rows={5}
