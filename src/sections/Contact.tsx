@@ -46,17 +46,19 @@ export function Contact() {
                 <p className="text-gray-400 text-sm mb-4">Connect with me</p>
                 <div className="flex gap-4">
                   <a
-                    href="https://github.com/yourusername"
+                    href="https://github.com/josephr04"
                     target="_blank"
+                    aria-label="GitHub"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center w-12 h-12 bg-gray-800/70 rounded-xl border border-white/10 hover:border-blue-500 hover:bg-gray-800 hover:-translate-y-2 hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 group"
                   >
                     <FaGithub className="w-5 h-5 group-hover:text-blue-400 transition-colors" />
                   </a>
                   
-                  <a
-                    href="https://linkedin.com/in/yourusername"
+                  <a 
+                    href="https://www.linkedin.com/in/joseph-rosas-595a15371"
                     target="_blank"
+                    aria-label="LinkedIn"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center w-12 h-12 bg-gray-800/70 rounded-xl border border-white/10 hover:border-blue-500 hover:bg-gray-800 hover:-translate-y-2 hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 group"
                   >
@@ -65,6 +67,7 @@ export function Contact() {
 
                   <a
                     href="mailto:jrosas.dev@gmail.com"
+                    aria-label="Email"
                     className="flex items-center justify-center w-12 h-12 bg-gray-800/70 rounded-xl border border-white/10 hover:border-blue-500 hover:bg-gray-800 hover:-translate-y-2 hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 group"
                   >
                     <IoIosMail className="w-6 h-6 group-hover:text-blue-400 transition-colors" />
