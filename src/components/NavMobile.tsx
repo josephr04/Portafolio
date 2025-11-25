@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Squash as Hamburger } from "hamburger-react";
-import { routes } from "../navigation";
+import { routes } from "../data/navigation";
 
 export const NavMobile = () => {
   const [isOpen, setOpen] = useState(false);

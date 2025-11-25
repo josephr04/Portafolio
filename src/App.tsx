@@ -1,6 +1,6 @@
 import './App.css'
 import { NavBar } from './components/NavBar'
-import { Header } from './sections/Header';
+import { Hero } from './sections/Hero';
 import { About } from './sections/About';
 import { Skills } from './sections/Skills';
 import { Projects } from './sections/Projects';
@@ -16,7 +16,7 @@ function App() {
       <div className=''>
         <NavBar />
         <ScrollProgressBar />
-        <Header />
+        <Hero />
         <About />
         <Experience />
         <Projects />

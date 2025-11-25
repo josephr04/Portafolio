@@ -1,11 +1,11 @@
-import { Experiences } from "../experience";
+import { Experiences } from "../data/experience";
 
 export function Experience() {
   return (
-    <div id="experience" className='px-[2em] pt-10 pb-10 text-white flex flex-col'>
+    <div id="experience" className='px-[2em] pt-10 pb-10 text-white flex flex-col scroll-mt-20'>
       <div className="flex flex-col items-center justify-center mb-8">
         <div className="text-center text-4xl md:text-5xl font-bold mb-2">Experience</div>
-        <div className="h-1 bg-linear-to-r from-blue-400 to-purple-500 rounded-xl w-20"></div>
+          <div className="h-1 bg-linear-to-r from-blue-400 to-blue-600 rounded-xl w-20"></div>
       </div>
       <div className="relative mt-2 md:max-w-[min(800px,calc(100%-40px))] mx-auto w-full box-border">
         {/* Desktop Line */}

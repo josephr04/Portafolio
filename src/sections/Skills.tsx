@@ -1,24 +1,42 @@
-import { skillCategory } from "../skillCategory";
+import { skillCategories } from '../data/skillCategory'; 
 
 export function Skills() {
+
   return(
-    <div id="skills" className="px-[2em] pt-10 pb-10 bg-[#0d1117] text-white flex flex-col">
-      <div className="flex flex-col items-center justify-center mb-8">
-        <div className="text-center text-4xl md:text-5xl font-bold mb-2">Skills</div>
-        <div className="h-1 bg-linear-to-r from-blue-400 to-purple-500 rounded-xl w-20"></div>
-      </div>
-        <div className="flex-col flex gap-6">
-          {Object.entries(skillCategory).map(([category, skills]) => (
-            <div key={category} className="bg-gray-800/60 rounded-xl p-4 border border-[#30363d] hover:border-blue-500 transition-all duration-500 hover:-translate-y-2 hover:shadow-lg hover:shadow-blue-500/20">
-              <div className="text-[#8d96a0] text-[18px] font-medium mb-4">
-                <span className="font-semibold text-white">{category}</span>
-              </div>
-              <div className="flex flex-wrap gap-2">
+    <div id="skills" className="px-8 md:px-16 lg:px-32 py-20 bg-[#0d1117] text-white scroll-mt-10">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header */}
+        <div className="flex flex-col items-center justify-center mb-16">
+          <div className="text-center text-4xl md:text-5xl font-bold mb-3">Skills</div>
+          <div className="h-1 bg-linear-to-r from-blue-400 to-blue-600 rounded-xl w-20"></div>
+        </div>
+
+        {/* Skills Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {Object.entries(skillCategories).map(([category, skills]) => (
+            <div 
+              key={category} 
+              className="bg-gray-800/60 rounded-xl p-6 border border-[#30363d] hover:border-blue-500 transition-all duration-500 hover:-translate-y-2 hover:shadow-lg hover:shadow-blue-500/20"
+            >
+              {/* Category Title */}
+              <h3 className="text-xl font-semibold text-white mb-4">
+                {category}
+              </h3>
+
+              {/* Skills Tags */}
+              <div className="flex flex-wrap gap-3">
                 {skills.map((skill) => {
                   return (
-                    <div key={skill.title} className="flex items-center justify-center gap-1 rounded-md px-2 py-0.5 bg-blue-400/15 border border-blue-500/30 transition-all hover:-translate-y-1">
-                      <img src={skill.logo} className="w-4 h-4" alt={skill.title}/>
-                      <div className="text-[14px] font-medium">{skill.title}</div>
+                    <div 
+                      key={skill.title} 
+                      className="flex items-center gap-2 rounded-lg px-3 py-2 bg-blue-400/15 border border-blue-500/30 transition-all hover:-translate-y-1 hover:bg-blue-500/25 cursor-default"
+                    >
+                      <img 
+                        src={skill.logo} 
+                        className="w-5 h-5" 
+                        alt={`${skill.title} logo`}
+                      />
+                      <span className="text-sm font-medium text-blue-100">{skill.title}</span>
                     </div>
                   );
                 })}
@@ -26,6 +44,7 @@ export function Skills() {
             </div>
           ))}
         </div>
+      </div>
     </div>
   );
-};
+}
