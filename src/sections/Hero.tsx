@@ -3,9 +3,11 @@ import { TypeAnimation } from 'react-type-animation';
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { HiArrowRight } from "react-icons/hi";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export function Hero() {
   const [isLoaded, setIsLoaded] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     setIsLoaded(true);
@@ -33,7 +35,7 @@ export function Hero() {
 
           {/* Main heading */}
           <div>
-            <h2 className='text-gray-400 text-lg mb-2'>Hello, I'm</h2>
+            <h2 className='text-gray-400 text-lg mb-2'>{t('hero.title')}</h2>
             <TypeAnimation
               sequence={[
                 'Joseph Rosas',
@@ -50,29 +52,26 @@ export function Hero() {
             />
             <div className='flex items-center gap-3 text-2xl md:text-3xl text-gray-300'>
               <span className='text-blue-400 font-mono'>{'<'}</span>
-              <h3>Software Developer</h3>
+              <h3>{t('hero.subtitle')}</h3>
               <span className='text-blue-400 font-mono'>{'/>'}</span>
             </div>
           </div>
 
           {/* Description */}
-          <p className='text-gray-400 text-lg leading-relaxed max-w-xl'>
-            Full-stack software developer with a strong focus on backend development. 
-            I build robust, scalable applications using modern technologies and best practices.
-          </p>
+          <p className='text-gray-400 text-lg leading-relaxed max-w-xl'>{t('hero.description')}</p>
 
           {/* CTA Buttons */}
           <div className='flex flex-wrap gap-4 pt-4'>
             <a href='#' className='group relative flex justify-center items-center px-8 py-4 bg-linear-to-r from-blue-500 to-blue-600 rounded-lg font-semibold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/40'>
               <span className='relative z-10 flex items-center gap-2 justify-center'>
-                Download CV
+                {t('hero.downloadCV')}
                 <HiArrowRight className='group-hover:translate-x-1 transition-transform' />
               </span>
               <div className='absolute inset-0 bg-linear-to-r from-blue-600 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
             </a>
             
             <a href='#contact' className='px-8 py-4 border-2 border-gray-700 rounded-lg font-semibold hover:border-blue-400 hover:bg-blue-400/5 transition-all duration-300'>
-              Get in touch
+              {t('hero.contact')}
             </a>
           </div>
 
