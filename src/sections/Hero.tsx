@@ -50,8 +50,8 @@ export function Hero() {
               speed={30}
               className='text-5xl md:text-6xl lg:text-7xl font-bold mb-4 bg-linear-to-r from-[#60A5FA] to-[#3B82F6] bg-clip-text text-transparent'
             />
-            <div className='flex items-center gap-3 text-2xl md:text-3xl text-gray-300'>
-              <span className='text-blue-400 font-mono'>{'<'}</span>
+            <div className='flex items-center gap-2 text-2xl md:text-3xl text-gray-300'>
+              <span className='text-blue-400 text-xl md:text-2xl font-mono'>{'<'}</span>
               <h3>{t('hero.subtitle')}</h3>
               <span className='text-blue-400 font-mono'>{'/>'}</span>
             </div>

@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Squash as Hamburger } from "hamburger-react";
 import { routes } from "../data/navigation";
+import { LanguageToggle } from './LanguageToggle';
 import { useLanguage } from "../contexts/LanguageContext";
 
 export const NavMobile = () => {
@@ -14,6 +15,7 @@ export const NavMobile = () => {
 
   return (
     <div ref={ref} className="lg:hidden">
+      {/* Icono Hamburguesa */}
       <div className="fixed right-3 top-3">
         <Hamburger toggled={isOpen} size={24} toggle={setOpen} />
       </div>
@@ -27,35 +29,44 @@ export const NavMobile = () => {
             transition={{ duration: 0.2 }}
             className="fixed left-0 right-0 top-18 p-5 pt-[0.5em] z-50 bg-[#0d1117] border-b border-t border-[#30363d] shadow-4xl"
           >
+            {/* LINKS DEL MENÚ */}
             <ul className="grid gap-2">
-              {routes.map((route, idx) => {
-                return (
-                  <li key={route.title} className="w-full p-[0.08rem]">
-                    <motion.div
-                      initial={{ scale: 0, opacity: 0 }}
-                      animate={{ scale: 1, opacity: 1 }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 260,
-                        damping: 20,
-                        delay: 0.1 + idx / 10,
-                      }}
-                      className="w-full"
+              {routes.map((route, idx) => (
+                <li key={route.titleKey} className="w-full p-[0.08rem]">
+                  <motion.div
+                    initial={{ scale: 0, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 260,
+                      damping: 20,
+                      delay: 0.1 + idx / 10,
+                    }}
+                    className="w-full"
+                  >
+                    <a
+                      onClick={() => setOpen(false)}
+                      className="flex items-center justify-center w-full p-3 font-semibold"
+                      href={route.href}
                     >
-                      <a
-                        onClick={() => setOpen(false)}
-                        className="flex items-center justify-center w-full p-3 font-semibold"
-                        href={route.href}
-                      >
-                        <span className="flex gap-1 text-base">
-                          {t(route.titleKey)}
-                        </span>
-                      </a>
-                    </motion.div>
-                  </li>
-                );
-              })}
+                      <span className="flex gap-1 text-base">
+                        {t(route.titleKey)}
+                      </span>
+                    </a>
+                  </motion.div>
+                </li>
+              ))}
             </ul>
+
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7 }}
+              className="flex justify-center mt-4"
+            >
+              <LanguageToggle />
+            </motion.div>
+
           </motion.div>
         )}
       </AnimatePresence>
