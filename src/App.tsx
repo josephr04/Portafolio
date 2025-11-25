@@ -8,11 +8,12 @@ import { Experience } from './sections/Experience';
 import { ScrollProgressBar } from './components/ScrollProgressBar';
 import { Footer } from './components/Footer';
 import { Contact } from './sections/Contact';
+import { LanguageProvider } from './contexts/LanguageContext';
 
 function App() {
 
   return (
-    <>
+    <LanguageProvider>
       <div className=''>
         <NavBar />
         <ScrollProgressBar />
@@ -24,7 +25,7 @@ function App() {
         <Contact />
         <Footer />
       </div>
-    </>
+    </LanguageProvider>
   )
 }
 
