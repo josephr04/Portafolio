@@ -3,22 +3,22 @@ import { FaCode, FaLaptopCode, FaRocket, FaUsers } from 'react-icons/fa';
 export const highlights = [
   {
     icon: FaCode,
-    title: "Clean Code",
-    description: "Writing maintainable and scalable solutions"
+    titleKey: "about.highlight.cleanCode.title",
+    descriptionKey: "about.highlight.cleanCode.description"
   },
   {
     icon: FaLaptopCode,
-    title: "Full-Stack",
-    description: "Expertise in frontend and backend development"
+    titleKey: "about.highlight.fullStack.title",
+    descriptionKey: "about.highlight.fullStack.description"
   },
   {
     icon: FaRocket,
-    title: "Fast Learner",
-    description: "Always eager to learn new technologies"
+    titleKey: "about.highlight.fastLearner.title",
+    descriptionKey: "about.highlight.fastLearner.description"
   },
   {
     icon: FaUsers,
-    title: "Team Player",
-    description: "Excel in collaborative environments"
+    titleKey: "about.highlight.teamPlayer.title",
+    descriptionKey: "about.highlight.teamPlayer.description"
   }
-  ];
+] as const;

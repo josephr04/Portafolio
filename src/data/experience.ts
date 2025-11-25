@@ -1,10 +1,10 @@
 export const Experiences = [
   {
-    title: "Web Developer & Designer",
-    business: "Recreaciones Noa",
-    time: "Oct 2025 - Dic 2025",
-    role: "Freelancer",
-    description: "Developed a complete web solution for a small recreational business, including UI/UX design, full-stack development, hosting setup, and SEO optimization. I also integrated an AI-powered chatbot as requested by the owners to automate customer service and handle frequently asked questions, improving overall user experience.",    
+    titlekey: "experience.webDeveloperDesigner.title",
+    businesskey: "experience.webDeveloperDesigner.business",
+    timekey: "experience.webDeveloperDesigner.time",
+    rolekey: "experience.webDeveloperDesigner.role",
+    descriptionkey: "experience.webDeveloperDesigner.description",    
     skills: [
       "React",
       "Tailwind",
@@ -13,16 +13,16 @@ export const Experiences = [
     ],
   },
   {
-    title: "Hackaton 2025",
-    business: "Copa Airlines",
-    time: "Oct 2025",
-    role: "Participant",
-    description: "Participated in the Copa Airlines Hackathon 2025, where I handled data cleaning and preprocessing using Databricks tools. I also performed data analysis utilizing AWS services including S3 to extract meaningful insights from aviation datasets and support data-driven decision making in my team.",
+    titlekey: "experience.hackaton2025.title",
+    businesskey: "experience.hackaton2025.business",
+    timekey: "experience.hackaton2025.time",
+    rolekey: "experience.hackaton2025.role",
+    descriptionkey: "experience.hackaton2025.description",
     skills: [
-      "Artificial Intelligence",
+      "AI",
       "Data Analysis",
       "AWS",
       "Databricks",
     ],
   },
-]
+] as const;

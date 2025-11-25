@@ -1,8 +1,8 @@
 export const projects = [
     {
-      title: "Tech Store Manager",
+      titlekey: "projects.techStoreManager.title",
       image: "tecnomarket.png",
-      description: "A modern and responsive inventory management system, where store owners can track products and manage stock levels.",
+      descriptionkey: "projects.techStoreManager.description",
       tech: [
         "PHP",
         "Javascript",
@@ -12,9 +12,9 @@ export const projects = [
       demo: "https://github.com/josephr04/ds6-proyecto1",
     },
     {
-      title: "Movies+ Web Library",
+      titlekey: "projects.moviesWebLibrary.title",
       image: "movies.png",
-      description: "Movie catalog that encompasses a wide variety of movies provided by The Movie Database (TMDB) API.",
+      descriptionkey: "projects.moviesWebLibrary.description",
       tech: [
         "Next.js",
         "Typescript",
@@ -24,9 +24,9 @@ export const projects = [
       demo: "https://moviesplus.vercel.app",
     },
     {
-      title: "Flag Matching Game",
+      titlekey: "projects.flagMatchingGame.title",
       image: "flagmatchinggame.png",
-      description: "A simple and fun web game where players test their geography knowledge by matching countries with their flags.",
+      descriptionkey: "projects.flagMatchingGame.description",
       tech: [
         "Typescript",
         "React",
@@ -35,4 +35,4 @@ export const projects = [
       repository: "https://github.com/josephr04/flag-matching-game",
       demo: "https://flag-matching-game.vercel.app",
     },
-];
+] as const;
