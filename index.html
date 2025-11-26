@@ -5,10 +5,23 @@
     <link rel="icon" href="/favicon.ico" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portafolio</title>
+    <meta name="description" content="Joseph Rosas - Full-stack Software Developer specializing in backend development">
+    <meta name="keywords" content="software developer, full-stack, backend, joseph rosas">
+    <meta property="og:title" content="Joseph Rosas - Portfolio">
+    <meta property="og:description" content="Full-stack Software Developer">
+    <meta property="og:image" content="">
+    <title>Joseph Rosas</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      (function() {
+        const theme = localStorage.getItem('theme') || 'dark';
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
   </body>
 </html>
