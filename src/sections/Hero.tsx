@@ -14,18 +14,18 @@ export function Hero() {
   }, []);
 
   return(
-    <div className='relative min-h-screen flex items-center px-8 md:px-16 lg:px-24 bg-[#0a0a0f] text-white overflow-hidden'>
+    <div id='hero' className='relative min-h-screen flex items-center px-8 md:px-16 lg:px-24 bg-white dark:bg-[#0a0a0f] text-gray-900 dark:text-white overflow-hidden transition-colors duration-300'>
       {/* Subtle animated background */}
       <div className='absolute inset-0'>
-        <div className='absolute inset-0 bg-linear-to-br from-blue-900/10 via-transparent to-blue-800/10 animate-pulse-slow' />
-        <div className='absolute top-0 left-0 w-full h-full bg-[url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDk2LDE2NSwyNTAsMC4wNSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==")] opacity-30' />
+        <div className='absolute inset-0 bg-linear-to-br from-blue-100/30 via-transparent to-blue-200/20 dark:from-blue-900/10 dark:via-transparent dark:to-blue-800/10 animate-pulse-slow transition-colors duration-300' />
+        <div className='absolute top-0 left-0 w-full h-full bg-[url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDk2LDE2NSwyNTAsMC4wNSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==")] opacity-20 dark:opacity-30 transition-opacity duration-300' />
       </div>
 
       {/* Floating geometric shapes */}
       <div className='absolute inset-0 overflow-hidden pointer-events-none'>
-        <div className='absolute top-20 left-10 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl animate-float' />
-        <div className='absolute bottom-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-float-delay-2' />
-        <div className='absolute top-1/2 left-1/3 w-64 h-64 bg-blue-400/10 rounded-full blur-3xl animate-float-delay-4' />
+        <div className='absolute top-20 left-10 w-72 h-72 bg-blue-300/20 dark:bg-blue-400/10 rounded-full blur-3xl animate-float transition-colors duration-300' />
+        <div className='absolute bottom-20 right-10 w-96 h-96 bg-blue-400/20 dark:bg-blue-500/10 rounded-full blur-3xl animate-float-delay-2 transition-colors duration-300' />
+        <div className='absolute top-1/2 left-1/3 w-64 h-64 bg-blue-300/20 dark:bg-blue-400/10 rounded-full blur-3xl animate-float-delay-4 transition-colors duration-300' />
       </div>
 
       {/* Main content */}
@@ -35,7 +35,7 @@ export function Hero() {
 
           {/* Main heading */}
           <div>
-            <h2 className='text-gray-400 text-lg mb-2'>{t('hero.title')}</h2>
+            <h2 className='text-gray-600 dark:text-gray-400 text-lg mb-2 transition-colors duration-300'>{t('hero.title')}</h2>
             <TypeAnimation
               sequence={[
                 'Joseph Rosas',
@@ -50,7 +50,7 @@ export function Hero() {
               speed={30}
               className='text-5xl md:text-6xl lg:text-7xl font-bold mb-4 bg-linear-to-r from-[#60A5FA] to-[#3B82F6] bg-clip-text text-transparent'
             />
-            <div className='flex items-center gap-2 text-2xl md:text-3xl text-gray-300'>
+            <div className='flex items-center gap-2 text-2xl md:text-3xl text-gray-700 dark:text-gray-300 transition-colors duration-300'>
               <span className='text-blue-400 text-xl md:text-2xl font-mono'>{'<'}</span>
               <h3>{t('hero.subtitle')}</h3>
               <span className='text-blue-400 font-mono'>{'/>'}</span>
@@ -58,19 +58,19 @@ export function Hero() {
           </div>
 
           {/* Description */}
-          <p className='text-gray-400 text-lg leading-relaxed max-w-xl'>{t('hero.description')}</p>
+          <p className='text-gray-600 dark:text-gray-400 text-lg leading-relaxed max-w-xl transition-colors duration-300'>{t('hero.description')}</p>
 
           {/* CTA Buttons */}
           <div className='flex flex-wrap gap-4 pt-4'>
             <a href='#' className='group relative flex justify-center items-center px-8 py-4 bg-linear-to-r from-blue-500 to-blue-600 rounded-lg font-semibold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/40'>
-              <span className='relative z-10 flex items-center gap-2 justify-center'>
+              <span className='relative z-10 flex items-center gap-2 justify-center text-white'>
                 {t('hero.downloadCV')}
                 <HiArrowRight className='group-hover:translate-x-1 transition-transform' />
               </span>
               <div className='absolute inset-0 bg-linear-to-r from-blue-600 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
             </a>
             
-            <a href='#contact' className='px-8 py-4 border-2 border-gray-700 rounded-lg font-semibold hover:border-blue-400 hover:bg-blue-400/5 transition-all duration-300'>
+            <a href='#contact' className='px-8 py-4 border-2 border-gray-300 dark:border-gray-700 rounded-lg font-semibold hover:border-blue-400 hover:bg-blue-400/5 transition-all duration-300'>
               {t('hero.contact')}
             </a>
           </div>
@@ -88,9 +88,9 @@ export function Hero() {
                 aria-label={label}
                 rel="noopener noreferrer" 
                 target="_blank"
-                className='flex items-center justify-center w-12 h-12 p-3 backdrop-blur-lg bg-gray-800/60 border border-white/10 rounded-lg hover:bg-blue-400/10 hover:border-blue-400/50 transition-all duration-300 hover:-translate-y-1 group'
+                className='flex items-center justify-center w-12 h-12 p-3 backdrop-blur-lg bg-gray-100/80 dark:bg-gray-800/60 border border-gray-300 dark:border-white/10 rounded-lg hover:bg-blue-400/10 hover:border-blue-400/50 transition-all duration-300 hover:-translate-y-1 group'
               >
-                <Icon className="text-gray-300 group-hover:text-blue-400 transition-colors" size={size} />
+                <Icon className="text-gray-700 dark:text-gray-300 group-hover:text-blue-400 transition-colors" size={size} />
               </a>
             ))}
           </div>
@@ -100,19 +100,19 @@ export function Hero() {
         <div className={`hidden md:flex justify-center items-center transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
           <div className='relative w-full max-w-md aspect-square'>
             {/* Animated rings */}
-            <div className='absolute inset-0 border-2 border-blue-400/30 rounded-full animate-spin-slow' />
-            <div className='absolute inset-8 border-2 border-blue-500/20 rounded-full animate-spin-slow-reverse' />
-            <div className='absolute inset-16 border-2 border-blue-400/25 rounded-full animate-spin-slow-10' />
+            <div className='absolute inset-0 border-2 border-blue-400/50 dark:border-blue-400/30 rounded-full animate-spin-slow transition-colors duration-300' />
+            <div className='absolute inset-8 border-2 border-blue-500/40 dark:border-blue-500/20 rounded-full animate-spin-slow-reverse transition-colors duration-300' />
+            <div className='absolute inset-16 border-2 border-blue-400/45 dark:border-blue-400/25 rounded-full animate-spin-slow-10 transition-colors duration-300' />
             
             {/* Center glow */}
             <div className='absolute inset-0 flex items-center justify-center'>
-              <div className='w-48 h-48 bg-blue-400/20 rounded-full blur-2xl animate-pulse' />
+              <div className='w-48 h-48 bg-blue-400/30 dark:bg-blue-400/20 rounded-full blur-2xl animate-pulse transition-colors duration-300' />
             </div>
 
             {/* Floating code symbols */}
-            <div className='absolute top-1/4 left-0 text-blue-400/30 text-6xl font-mono animate-float'>{'{'}</div>
-            <div className='absolute bottom-1/4 right-0 text-blue-400/30 text-6xl font-mono animate-float-delay-1'>{'}'}</div>
-            <div className='absolute top-1/3 right-1/4 text-blue-400/30 text-4xl font-mono animate-float-delay-2'>{'</>'}</div>
+            <div className='absolute top-1/4 left-0 text-blue-400/50 dark:text-blue-400/30 text-6xl font-mono animate-float transition-colors duration-300'>{'{'}</div>
+            <div className='absolute bottom-1/4 right-0 text-blue-400/50 dark:text-blue-400/30 text-6xl font-mono animate-float-delay-1 transition-colors duration-300'>{'}'}</div>
+            <div className='absolute top-1/3 right-1/4 text-blue-400/50 dark:text-blue-400/30 text-4xl font-mono animate-float-delay-2 transition-colors duration-300'>{'</>'}</div>
           </div>
         </div>
       </div>

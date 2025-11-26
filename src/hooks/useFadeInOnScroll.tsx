@@ -57,7 +57,7 @@ interface FadeInSectionProps {
 export const FadeInSection: React.FC<FadeInSectionProps> = ({ 
   children, 
   delay = 0, 
-  duration = 600 
+  duration = 400 
 }) => {
   const [ref, isVisible] = useFadeInOnScroll({ threshold: 0.2 });
 

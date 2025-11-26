@@ -9,23 +9,26 @@ import { ScrollProgressBar } from './components/ScrollProgressBar';
 import { Footer } from './components/Footer';
 import { Contact } from './sections/Contact';
 import { LanguageProvider } from './contexts/LanguageContext';
+import { ThemeProvider } from './contexts/ThemeContext';
 
 function App() {
 
   return (
-    <LanguageProvider>
-      <div className=''>
-        <NavBar />
-        <ScrollProgressBar />
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Contact />
-        <Footer />
-      </div>
-    </LanguageProvider>
+    <ThemeProvider>
+      <LanguageProvider>
+        <div className=''>
+          <NavBar />
+          <ScrollProgressBar />
+          <Hero />
+          <About />
+          <Experience />
+          <Projects />
+          <Skills />
+          <Contact />
+          <Footer />
+        </div>
+      </LanguageProvider>
+    </ThemeProvider>
   )
 }
 

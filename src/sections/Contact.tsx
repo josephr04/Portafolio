@@ -12,20 +12,20 @@ export function Contact() {
   };
 
   return (
-    <div id="contact" className="px-6 py-16 bg-[#0d1117] text-white scroll-mt-10">
+    <div id="contact" className="px-6 py-16 bg-white dark:bg-[#0d1117] text-gray-900 dark:text-white scroll-mt-10 transition-colors duration-300">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="flex flex-col items-center justify-center mb-12">
-        <div className="text-center text-4xl md:text-5xl font-bold mb-2">{t('contact.title')}</div>
+          <div className="text-center text-4xl md:text-5xl font-bold mb-2 transition-colors duration-300">{t('contact.title')}</div>
           <div className="h-1 bg-linear-to-r from-blue-400 to-blue-600 rounded-xl w-20"></div>
-          <p className="text-gray-400 mt-4 text-center max-w-xl">{t('contact.subtitle')}</p>
+          <p className="text-gray-600 dark:text-gray-400 mt-4 text-center max-w-xl transition-colors duration-300">{t('contact.subtitle')}</p>
         </div>
 
         <FadeInSection>
           <div className="grid md:grid-cols-2 gap-8 items-start">
             {/* Contact Info */}
             <div className="space-y-6">
-              <div className="bg-gray-800/40 backdrop-blur-sm rounded-2xl p-8 border border-[#30363d] hover:border-blue-500/50 transition-all duration-300">
+              <div className="bg-gray-100/80 dark:bg-gray-800/40 backdrop-blur-sm rounded-2xl p-8 border border-gray-300 dark:border-[#30363d] hover:border-blue-500/50 transition-all duration-300">
                 <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
                   <IoIosMail className="w-6 h-6 text-blue-400" />
                   {t('contact.info.title')}
@@ -33,10 +33,10 @@ export function Contact() {
                 
                 {/* Email */}
                 <div className="mb-6 group">
-                  <p className="text-gray-400 text-sm mb-2">{t('contact.info.email')}</p>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm mb-2 transition-colors duration-300">{t('contact.info.email')}</p>
                   <a 
                     href="mailto:jrosas.dev@gmail.com"
-                    className="text-lg flex items-center gap-2 text-white hover:text-blue-400 transition-colors duration-300"
+                    className="text-lg flex items-center gap-2 text-gray-900 dark:text-white hover:text-blue-400 transition-colors duration-300"
                   >
                     jrosas.dev@gmail.com
                   </a>
@@ -44,7 +44,7 @@ export function Contact() {
 
                 {/* Social Links */}
                 <div>
-                  <p className="text-gray-400 text-sm mb-4">{t('contact.info.connect')}</p>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 transition-colors duration-300">{t('contact.info.connect')}</p>
                   <div className="flex gap-4">
                   {[
                     { Icon: FaLinkedinIn, href: "https://www.linkedin.com/in/joseph-rosas-595a15371", size: 20, label: "LinkedIn" },
@@ -57,9 +57,9 @@ export function Contact() {
                       target="_blank"
                       aria-label={label}
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center w-12 h-12 bg-gray-800/70 rounded-xl border border-white/10 hover:border-blue-500 hover:bg-gray-800 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 group"
+                      className="flex items-center justify-center w-12 h-12 bg-gray-200 dark:bg-gray-800/70 rounded-xl border border-gray-300 dark:border-white/10 hover:border-blue-500 hover:bg-gray-300 dark:hover:bg-gray-800 hover:-translate-y-1 transition-all duration-300 group"
                     >
-                      <Icon className="w-5 h-5 group-hover:text-blue-400 transition-colors" size={size} />
+                      <Icon className="w-5 h-5 text-gray-700 dark:text-white group-hover:text-blue-400 transition-colors" size={size} />
                     </a>
                   ))}
                   </div>
@@ -71,7 +71,7 @@ export function Contact() {
             {/* Contact Form */}
             <form 
               onSubmit={handleSubmit}
-              className="bg-gray-800/40 backdrop-blur-sm rounded-2xl p-8 border border-[#30363d] hover:border-blue-500/30 transition-all duration-300"
+              className="bg-gray-100/80 dark:bg-gray-800/40 backdrop-blur-sm rounded-2xl p-8 border border-gray-300 dark:border-[#30363d] hover:border-blue-500/30 transition-all duration-300"
             >
               
               <div className="space-y-4">
@@ -79,7 +79,7 @@ export function Contact() {
                   <input
                     type="text"
                     placeholder={t('contact.form.name')}
-                    className="w-full px-4 py-3 rounded-xl bg-gray-800/70 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 rounded-xl bg-gray-200 dark:bg-gray-800/70 border border-gray-300 dark:border-white/10 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                     required
                   />
                 </div>
@@ -88,7 +88,7 @@ export function Contact() {
                   <input
                     type="email"
                     placeholder={t('contact.form.email')}
-                    className="w-full px-4 py-3 rounded-xl bg-gray-800/70 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 rounded-xl bg-gray-200 dark:bg-gray-800/70 border border-gray-300 dark:border-white/10 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                     required
                   />
                 </div>
@@ -97,7 +97,7 @@ export function Contact() {
                   <input
                     type="text"
                     placeholder={t('contact.form.subject')}
-                    className="w-full px-4 py-3 rounded-xl bg-gray-800/70 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 rounded-xl bg-gray-200 dark:bg-gray-800/70 border border-gray-300 dark:border-white/10 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                     required
                   />
                 </div>
@@ -107,7 +107,7 @@ export function Contact() {
                     placeholder={t('contact.form.message')}
                     rows={5}
                     required
-                    className="w-full px-4 py-3 rounded-xl bg-gray-800/70 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none"
+                    className="w-full px-4 py-3 rounded-xl bg-gray-200 dark:bg-gray-800/70 border border-gray-300 dark:border-white/10 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none"
                   />
                 </div>
 

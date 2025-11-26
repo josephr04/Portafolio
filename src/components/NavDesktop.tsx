@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { LanguageToggle } from './LanguageToggle';
 import { useLanguage } from "../contexts/LanguageContext";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function NavDesktop() {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
@@ -29,6 +30,8 @@ export function NavDesktop() {
 
       if (current) {
         setActiveSection(current.title);
+      } else {
+        setActiveSection("");
       }
     };
 
@@ -55,7 +58,7 @@ export function NavDesktop() {
               >
                 <a 
                   href={href} 
-                  className='flex items-center gap-1 transition-all duration-450 font-semibold hover:text-blue-400'
+                  className='flex dark:text-white text-black items-center gap-1 transition-all duration-450 font-semibold hover:text-blue-400'
                 >
                   {t(titleKey)}
                 </a>
@@ -72,6 +75,9 @@ export function NavDesktop() {
         })}
         <li>
           <LanguageToggle />
+        </li>
+        <li>
+          <ThemeToggle />
         </li>
       </ul>
     </div>

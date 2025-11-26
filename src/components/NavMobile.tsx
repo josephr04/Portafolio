@@ -5,6 +5,7 @@ import { Squash as Hamburger } from "hamburger-react";
 import { routes } from "../data/navigation";
 import { LanguageToggle } from './LanguageToggle';
 import { useLanguage } from "../contexts/LanguageContext";
+import { ThemeToggle } from "./ThemeToggle";
 
 export const NavMobile = () => {
   const [isOpen, setOpen] = useState(false);
@@ -16,7 +17,7 @@ export const NavMobile = () => {
   return (
     <div ref={ref} className="lg:hidden">
       {/* Icono Hamburguesa */}
-      <div className="fixed right-3 top-3">
+      <div className="fixed right-3 top-3 text-gray-900 dark:text-white transition-colors duration-300">
         <Hamburger toggled={isOpen} size={24} toggle={setOpen} />
       </div>
 
@@ -27,7 +28,7 @@ export const NavMobile = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed left-0 right-0 top-18 p-5 pt-[0.5em] z-50 bg-[#0d1117] border-b border-t border-[#30363d] shadow-4xl"
+            className="fixed left-0 right-0 top-18 p-5 pt-[0.5em] z-50 bg-white dark:bg-[#0d1117] border-b border-t border-gray-300 dark:border-[#30363d] shadow-4xl transition-colors duration-300"
           >
             {/* LINKS DEL MENÚ */}
             <ul className="grid gap-2">
@@ -46,7 +47,7 @@ export const NavMobile = () => {
                   >
                     <a
                       onClick={() => setOpen(false)}
-                      className="flex items-center justify-center w-full p-3 font-semibold"
+                      className="flex items-center justify-center w-full p-3 font-semibold text-gray-900 dark:text-white hover:text-blue-400 transition-colors duration-300"
                       href={route.href}
                     >
                       <span className="flex gap-1 text-base">
@@ -62,9 +63,10 @@ export const NavMobile = () => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="flex justify-center mt-4"
+              className="flex justify-center mt-4 gap-3"
             >
               <LanguageToggle />
+              <ThemeToggle />
             </motion.div>
 
           </motion.div>
