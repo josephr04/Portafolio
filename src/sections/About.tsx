@@ -6,7 +6,7 @@ export function About() {
   const { t } = useLanguage();
 
   return(
-    <div id="about" className='px-8 md:px-16 lg:px-24 py-20 text-white scroll-mt-10'>
+    <div id="about" className='px-8 md:px-16 lg:px-24 py-20 text-white scroll-mt-10 light:bg-white'>
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="flex flex-col items-center justify-center mb-16">
@@ -47,7 +47,7 @@ export function About() {
                 {/* Image container */}
                 <div className="relative">
                   <img 
-                    src="../public/dogpfp.jpg" 
+                    src="../dogpfp.jpg" 
                     alt="Joseph Rosas" 
                     className="relative border-4 border-blue-400/30 rounded-full w-64 h-64 md:w-72 md:h-72 object-cover shadow-2xl shadow-blue-500/20 group-hover:scale-105 transition-transform duration-500 ease-out" 
                   />
