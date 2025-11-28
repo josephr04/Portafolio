@@ -1,4 +1,3 @@
-// ThemeToggle.tsx
 import { FiSun, FiMoon } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import { useTheme } from '../contexts/ThemeContext';

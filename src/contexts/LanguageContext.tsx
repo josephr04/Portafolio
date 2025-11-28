@@ -27,13 +27,11 @@ interface LanguageProviderProps {
 
 export const LanguageProvider = ({ children }: LanguageProviderProps) => {
   const [language, setLanguageState] = useState<Language>(() => {
-    // Cargar idioma del localStorage o usar español por defecto
     const saved = localStorage.getItem('language') as Language;
     return saved || 'es';
   });
 
   useEffect(() => {
-    // Guardar idioma en localStorage
     localStorage.setItem('language', language);
   }, [language]);
 

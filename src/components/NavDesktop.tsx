@@ -35,7 +35,7 @@ export function NavDesktop() {
       }
     };
 
-    handleScroll(); // Ejecutar al montar
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);

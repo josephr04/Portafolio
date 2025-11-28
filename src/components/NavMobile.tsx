@@ -16,7 +16,7 @@ export const NavMobile = () => {
 
   return (
     <div ref={ref} className="lg:hidden">
-      {/* Icono Hamburguesa */}
+      {/* Hamburger Button */}
       <div className="fixed right-3 top-3 text-gray-900 dark:text-white transition-colors duration-300">
         <Hamburger toggled={isOpen} size={24} toggle={setOpen} />
       </div>
@@ -30,7 +30,7 @@ export const NavMobile = () => {
             transition={{ duration: 0.2 }}
             className="fixed left-0 right-0 top-18 p-5 pt-[0.5em] z-50 bg-white dark:bg-[#0d1117] border-b border-t border-gray-300 dark:border-[#30363d] shadow-4xl transition-colors duration-300"
           >
-            {/* LINKS DEL MENÚ */}
+            {/* Menu Links */}
             <ul className="grid gap-2">
               {routes.map((route, idx) => (
                 <li key={route.titleKey} className="w-full p-[0.08rem]">
