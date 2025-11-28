@@ -1,73 +1,134 @@
-# React + TypeScript + Vite
+# Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio! This project showcases my skills, projects, and experience as a Full-Stack Software Developer with a focus on backend development. Built with modern technologies, it provides a responsive and engaging user experience while highlighting my technical expertise.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design**: Fully optimized for desktop, tablet, and mobile devices with adaptive layouts
+- **Multi-language Support**: Toggle between English and Spanish with persistent language preference
+- **Dark/Light Theme**: Switch between dark and light modes with smooth transitions and localStorage persistence
+- **Dynamic Sections**: Includes Hero, About Me, Experience, Projects, Skills, and Contact sections
+- **Interactive Animations**: 
+  - Smooth scroll-triggered fade-in effects
+  - Hover animations and transitions
+  - Animated navigation with active section highlighting
+- **Downloadable CV**: Visitors can download my CV directly from the portfolio
+- **Social Media Integration**: Quick access to my GitHub, LinkedIn, and email
+- **Contact Form**: Functional contact form for easy communication
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+### Frontend
+- **React 19** with TypeScript
+- **Tailwind CSS** for styling
+- **Framer Motion** for animations
+- **React Icons** for iconography
+- **Vite** as build tool
 
-## Expanding the ESLint configuration
+### Key Libraries
+- `react-type-animation` - Typing animation effects
+- `react-use` - Custom React hooks
+- `hamburger-react` - Mobile menu component
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Features Implementation
+- **Custom Hooks**: `useFadeInOnScroll` for scroll-based animations
+- **Context API**: Language and Theme management
+- **IntersectionObserver**: For scroll detection and active section tracking
+- **LocalStorage**: Persistent user preferences (language & theme)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Project Structure
+```
+src/
+├── components/          # Reusable components (NavBar, Footer, Toggles)
+├── sections/           # Main sections (Hero, About, Projects, etc.)
+├── contexts/           # React contexts (Language, Theme)
+├── hooks/             # Custom hooks (useFadeInOnScroll, useIsMobile)
+├── data/              # Static data (projects, skills, experience, navigation)
+└── App.tsx            # Main application component
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/josephr04/portfolio.git
 ```
+
+2. Navigate to the project directory:
+```bash
+cd portfolio
+```
+
+3. Install dependencies:
+```bash
+npm install
+```
+
+4. Run the development server:
+```bash
+npm run dev
+```
+
+5. Open your browser and visit `http://localhost:5173`
+
+### Build for Production
+```bash
+npm run build
+```
+
+The optimized production build will be in the `dist/` folder.
+
+## Sections Overview
+
+### 1. Hero Section
+- Animated greeting and name display
+- Role description with decorative code tags
+- Call-to-action buttons (Download CV, Get in Touch)
+- Social media links
+- Animated geometric elements
+
+### 2. About Me
+- Personal introduction and background
+- Professional highlights with icons
+- Profile image with decorative effects
+- Fade-in scroll animations
+
+### 3. Experience
+- Timeline-style layout
+- Company, role, and duration information
+- Technology stack badges
+- Smooth hover effects
+
+### 4. Projects
+- Grid layout of featured projects
+- Project images, descriptions, and tech stacks
+- Links to live demos and GitHub repositories
+- Responsive card design
+
+### 5. Skills
+- Categorized skills (Languages, Frameworks, Databases, Tools)
+- Technology logos and names
+- Interactive hover effects
+
+### 6. Contact
+- Contact information card
+- Functional contact form
+- Social media links
+- Email integration
+
+## Contact
+
+- **Email**: josephrosasp@gmail.com
+- **LinkedIn**: [Joseph Rosas](https://www.linkedin.com/in/joseph-rosas-595a15371)
+- **GitHub**: [@josephr04](https://github.com/josephr04)
+
+
+---
+
+Thank you for visiting my portfolio! Feel free to reach out if you have any questions or opportunities.
