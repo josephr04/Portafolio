@@ -14,7 +14,7 @@ export function Hero() {
   }, []);
 
   return(
-    <div id='hero' className='relative min-h-screen flex items-center px-8 md:px-16 lg:px-24 bg-white dark:bg-[#0a0a0f] text-gray-900 dark:text-white overflow-hidden transition-colors duration-300'>
+    <div id='hero' className='relative h-auto py-10 md:min-h-screen flex items-center px-8 md:px-16 lg:px-24 bg-white dark:bg-[#0a0a0f] text-gray-900 dark:text-white overflow-hidden transition-colors duration-300'>
       {/* Subtle animated background */}
       <div className='absolute inset-0'>
         <div className='absolute inset-0 bg-linear-to-br from-blue-100/30 via-transparent to-blue-200/20 dark:from-blue-900/10 dark:via-transparent dark:to-blue-800/10 animate-pulse-slow transition-colors duration-300' />
@@ -48,11 +48,11 @@ export function Hero() {
               cursor={true}
               repeat={0}
               speed={30}
-              className='text-5xl md:text-6xl lg:text-7xl font-bold mb-4 bg-linear-to-r from-[#60A5FA] to-[#3B82F6] bg-clip-text text-transparent'
+              className='text-[41px] md:text-6xl lg:text-7xl font-bold mb-4 bg-linear-to-r from-[#60A5FA] to-[#3B82F6] bg-clip-text text-transparent'
             />
             <div className='flex items-center gap-2 text-2xl md:text-3xl text-gray-700 dark:text-gray-300 transition-colors duration-300'>
               <span className='text-blue-400 text-xl md:text-2xl font-mono'>{'<'}</span>
-              <h3>{t('hero.subtitle')}</h3>
+              <div className='text-[19px] md:text-2xl'>{t('hero.subtitle')}</div>
               <span className='text-blue-400 font-mono'>{'/>'}</span>
             </div>
           </div>
@@ -78,9 +78,9 @@ export function Hero() {
           {/* Social links */}
           <div className='flex gap-4 pt-4'>
             {[
-              { Icon: FaLinkedinIn, href: "https://www.linkedin.com/in/joseph-rosas-595a15371", size: 20, label: "LinkedIn" },
-              { Icon: FaGithub, href: "https://github.com/josephr04", size: 20, label: "GitHub" },
-              { Icon: IoIosMail, href: "mailto:joseph.rosas.peralta@gmail.com", size: 24, label: "Email" }
+              { Icon: FaLinkedinIn, href: "https://www.linkedin.com/in/joseph-rosas-595a15371", size: 22, label: "LinkedIn" },
+              { Icon: FaGithub, href: "https://github.com/josephr04", size: 22, label: "GitHub" },
+              { Icon: IoIosMail, href: "mailto:joseph.rosas.peralta@gmail.com", size: 26, label: "Email" }
             ].map(({ Icon, href, size, label }, index) => (
               <a 
                 key={index}
@@ -88,7 +88,7 @@ export function Hero() {
                 aria-label={label}
                 rel="noopener noreferrer" 
                 target="_blank"
-                className='flex items-center justify-center w-12 h-12 p-3 backdrop-blur-lg bg-gray-100/80 dark:bg-gray-800/60 border border-gray-300 dark:border-white/10 rounded-lg hover:bg-blue-400/10 hover:border-blue-400/50 transition-all duration-300 hover:-translate-y-1 group'
+                className='flex items-center justify-center w-13 h-13 p-3 backdrop-blur-lg bg-gray-100/80 dark:bg-gray-800/60 border border-gray-300 dark:border-white/10 rounded-lg hover:bg-blue-400/10 hover:border-blue-400/50 transition-all duration-300 hover:-translate-y-1 group'
               >
                 <Icon className="text-gray-700 dark:text-gray-300 group-hover:text-blue-400 transition-colors" size={size} />
               </a>

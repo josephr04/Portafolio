@@ -73,9 +73,9 @@ export function Contact() {
                   <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 transition-colors duration-300">{t('contact.info.connect')}</p>
                   <div className="flex gap-4">
                   {[
-                    { Icon: FaLinkedinIn, href: "https://www.linkedin.com/in/joseph-rosas-595a15371", size: 20, label: "LinkedIn" },
-                    { Icon: FaGithub, href: "https://github.com/josephr04", size: 20, label: "GitHub" },
-                    { Icon: IoIosMail, href: "mailto:joseph.rosas.peralta@gmail.com", size: 24, label: "Email" }
+                    { Icon: FaLinkedinIn, href: "https://www.linkedin.com/in/joseph-rosas-595a15371", size: 22, label: "LinkedIn" },
+                    { Icon: FaGithub, href: "https://github.com/josephr04", size: 22, label: "GitHub" },
+                    { Icon: IoIosMail, href: "mailto:joseph.rosas.peralta@gmail.com", size: 26, label: "Email" }
                   ].map(({ Icon, href, size, label }, index) => (                   
                     <a
                       key={index}
@@ -83,7 +83,7 @@ export function Contact() {
                       target="_blank"
                       aria-label={label}
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center w-12 h-12 bg-gray-200 dark:bg-gray-800/70 rounded-xl border border-gray-300 dark:border-white/10 hover:border-blue-500 hover:bg-gray-300 dark:hover:bg-gray-800 hover:-translate-y-1 transition-all duration-300 group"
+                      className="flex items-center justify-center w-13 h-13 bg-gray-200 dark:bg-gray-800/70 rounded-xl border border-gray-300 dark:border-white/10 hover:border-blue-500 hover:bg-gray-300 dark:hover:bg-gray-800 hover:-translate-y-1 transition-all duration-300 group"
                     >
                       <Icon className="w-5 h-5 text-gray-700 dark:text-white group-hover:text-blue-400 transition-colors" size={size} />
                     </a>
