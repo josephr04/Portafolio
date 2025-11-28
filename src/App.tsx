@@ -10,6 +10,7 @@ import { Footer } from './components/Footer';
 import { Contact } from './sections/Contact';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { ThemeProvider } from './contexts/ThemeContext';
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
           <Contact />
           <Footer />
         </div>
+        <Analytics />
       </LanguageProvider>
     </ThemeProvider>
   )
