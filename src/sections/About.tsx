@@ -47,7 +47,7 @@ export function About() {
                 {/* Image container */}
                 <div className="relative">
                   <img 
-                    src="../dogpfp.jpg" 
+                    src="../profilephoto.png" 
                     alt="Joseph Rosas" 
                     className="relative border-4 border-blue-400/30 rounded-full w-64 h-64 md:w-72 md:h-72 object-cover shadow-2xl shadow-blue-500/20 group-hover:scale-105 transition-transform duration-500 ease-out" 
                   />
