@@ -2,13 +2,39 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { FadeInSection } from '../hooks/useFadeInOnScroll';
 import { useLanguage } from "../contexts/LanguageContext";
+import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 export function Contact() {
   const { t } = useLanguage();
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Aquí puedes agregar la lógica para enviar el formulario
-    console.log('Form submitted');
+    setIsLoading(true);
+    setStatus('idle');
+
+    const form = e.currentTarget;
+
+    try {
+      await emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+      
+      setStatus('success');
+      form.reset();
+      
+      setTimeout(() => setStatus('idle'), 5000);
+    } catch (error) {
+      console.error('Error:', error);
+      setStatus('error');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -78,6 +104,7 @@ export function Contact() {
                 <div>
                   <input
                     type="text"
+                    name="user_name"
                     placeholder={t('contact.form.name')}
                     className="w-full px-4 py-3 rounded-xl bg-gray-200 dark:bg-gray-800/70 border border-gray-300 dark:border-white/10 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                     required
@@ -87,6 +114,7 @@ export function Contact() {
                 <div>
                   <input
                     type="email"
+                    name="user_email"
                     placeholder={t('contact.form.email')}
                     className="w-full px-4 py-3 rounded-xl bg-gray-200 dark:bg-gray-800/70 border border-gray-300 dark:border-white/10 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                     required
@@ -96,6 +124,7 @@ export function Contact() {
                 <div>
                   <input
                     type="text"
+                    name="subject"
                     placeholder={t('contact.form.subject')}
                     className="w-full px-4 py-3 rounded-xl bg-gray-200 dark:bg-gray-800/70 border border-gray-300 dark:border-white/10 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                     required
@@ -104,6 +133,7 @@ export function Contact() {
 
                 <div>
                   <textarea 
+                    name="message"
                     placeholder={t('contact.form.message')}
                     rows={5}
                     required
@@ -111,11 +141,24 @@ export function Contact() {
                   />
                 </div>
 
+                {status === 'success' && (
+                  <div className="p-3 bg-green-500/20 border border-green-500/50 rounded-lg text-green-600 dark:text-green-400 text-sm">
+                    {t('contact.form.success') || 'Message sent successfully!'}
+                  </div>
+                )}
+
+                {status === 'error' && (
+                  <div className="p-3 bg-red-500/20 border border-red-500/50 rounded-lg text-red-600 dark:text-red-400 text-sm">
+                    {t('contact.form.error') || 'Error sending message. Please try again.'}
+                  </div>
+                )}
+
                 <button
                   type="submit"
+                  disabled={isLoading}
                   className="w-full px-6 py-4 rounded-xl bg-linear-to-r from-blue-500 to-blue-600 text-white font-semibold shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 group cursor-pointer"
                 >
-                  <span>{t('contact.form.send')}</span>
+                  <span>{isLoading ? (t('contact.form.sending') || 'Sending...') : t('contact.form.send')}</span>
                 </button>
               </div>
             </form>
