@@ -62,7 +62,7 @@ export function Hero() {
 
           {/* CTA Buttons */}
           <div className='flex flex-wrap gap-4 pt-4'>
-            <a href='#' className='group relative flex justify-center items-center px-8 py-4 bg-linear-to-r from-blue-500 to-blue-600 rounded-lg font-semibold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/40'>
+            <a href='/cv/Joseph_Rosas_CV.pdf' download="Joseph_Rosas_CV.pdf" className='group relative flex justify-center items-center px-8 py-4 bg-linear-to-r from-blue-500 to-blue-600 rounded-lg font-semibold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/40'>
               <span className='relative z-10 flex items-center gap-2 justify-center text-white'>
                 {t('hero.downloadCV')}
                 <HiArrowRight className='group-hover:translate-x-1 transition-transform' />
