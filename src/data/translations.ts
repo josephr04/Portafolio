@@ -10,7 +10,7 @@ export const translations = {
     // Hero
     'hero.title': 'Hola, soy',
     'hero.subtitle': 'Desarrollador de Software',
-    'hero.description': 'Desarrollador de software full-stack con enfoque en desarrollo backend. Construyo aplicaciones robustas y escalables utilizando tecnologías modernas y mejores prácticas.',
+    'hero.description': 'Desarrollador de software Full Stack enfocado en desarrollo backend. Experimentado en la creación de aplicaciones modernas y escalables aplicando mejores prácticas.',
     'hero.downloadCV': 'Descargar CV',
     'hero.contact': 'Contacto',
 
