@@ -18,7 +18,7 @@ export const translations = {
     // About
     'about.title': 'Sobre mí',
     'about.paragraph1': 'Soy un estudiante de desarrollo y gestión de software en la Universidad Tecnológica de Panamá. Me caracterizo por aprender rápido, resolver problemas de forma eficiente y trabajar con buenas prácticas en cada proyecto.',
-    'about.paragraph2': 'Poseo fuertes habilidades en el desarrollo de aplicaciones web, tanto en frontend como en backend. Destaco en entornos colaborativos y siempre estoy ansioso por aprender y mejorar mis habilidades.',
+    'about.paragraph2': 'Poseo habilidades en el desarrollo de aplicaciones web, tanto en frontend como en backend. Destaco en entornos colaborativos y siempre estoy ansioso por aprender y mejorar mis habilidades.',
     
     // About Highlights
     'about.highlight.cleanCode.title': 'Código Limpio',
