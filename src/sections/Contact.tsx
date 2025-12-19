@@ -61,10 +61,10 @@ export function Contact() {
                 <div className="mb-6 group">
                   <p className="text-gray-600 dark:text-gray-400 text-sm mb-2 transition-colors duration-300">{t('contact.info.email')}</p>
                   <a 
-                    href="mailto:jrosas.dev@gmail.com"
+                    href="mailto:josephrosasp@gmail.com"
                     className="text-lg flex items-center gap-2 text-gray-900 dark:text-white hover:text-blue-400 transition-colors duration-300"
                   >
-                    jrosas.dev@gmail.com
+                    josephrosasp@gmail.com
                   </a>
                 </div>
 
@@ -75,7 +75,7 @@ export function Contact() {
                   {[
                     { Icon: FaLinkedinIn, href: "https://www.linkedin.com/in/joseph-rosas-595a15371", size: 22, label: "LinkedIn" },
                     { Icon: FaGithub, href: "https://github.com/josephr04", size: 22, label: "GitHub" },
-                    { Icon: IoIosMail, href: "mailto:joseph.rosas.peralta@gmail.com", size: 26, label: "Email" }
+                    { Icon: IoIosMail, href: "mailto:josephrosasp@gmail.com", size: 26, label: "Email" }
                   ].map(({ Icon, href, size, label }, index) => (                   
                     <a
                       key={index}
