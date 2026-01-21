@@ -1,5 +1,5 @@
 export const Experiences = [
-  {
+  /*{
     titlekey: "experience.webDeveloperDesigner.title",
     businesskey: "experience.webDeveloperDesigner.business",
     timekey: "experience.webDeveloperDesigner.time",
@@ -11,7 +11,7 @@ export const Experiences = [
       "Typescript",
       "SEO",
     ],
-  },
+  },*/
   {
     titlekey: "experience.hackaton2025.title",
     businesskey: "experience.hackaton2025.business",
