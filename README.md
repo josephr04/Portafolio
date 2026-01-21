@@ -47,43 +47,6 @@ src/
 └── App.tsx            # Main application component
 ```
 
-## Getting Started
-
-### Prerequisites
-- Node.js (v16 or higher)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/josephr04/portfolio.git
-```
-
-2. Navigate to the project directory:
-```bash
-cd portfolio
-```
-
-3. Install dependencies:
-```bash
-npm install
-```
-
-4. Run the development server:
-```bash
-npm run dev
-```
-
-5. Open your browser and visit `http://localhost:5173`
-
-### Build for Production
-```bash
-npm run build
-```
-
-The optimized production build will be in the `dist/` folder.
-
 ## Sections Overview
 
 ### 1. Hero Section
