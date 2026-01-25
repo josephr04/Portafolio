@@ -44,7 +44,6 @@ export function Contact() {
         <div className="flex flex-col items-center justify-center mb-12">
           <div className="text-center text-4xl md:text-5xl font-bold mb-2 transition-colors duration-300">{t('contact.title')}</div>
           <div className="h-1 bg-linear-to-r from-blue-400 to-blue-600 rounded-xl w-20"></div>
-          <p className="text-gray-600 dark:text-gray-400 mt-4 text-center max-w-xl transition-colors duration-300">{t('contact.subtitle')}</p>
         </div>
 
         <FadeInSection>
