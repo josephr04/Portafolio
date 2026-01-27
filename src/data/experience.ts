@@ -20,7 +20,7 @@ export const Experiences = [
     descriptionkey: "experience.hackaton2025.description",
     skills: [
       "AI",
-      "Data Analysis",
+      "Data Analytics",
       "AWS",
       "Databricks",
     ],
