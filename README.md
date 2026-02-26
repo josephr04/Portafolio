@@ -31,10 +31,10 @@ Welcome to my personal portfolio! This project showcases my skills, projects, an
 - `hamburger-react` - Mobile menu component
 
 ### Features Implementation
-- **Custom Hooks**: `useFadeInOnScroll` for scroll-based animations
-- **Context API**: Language and Theme management
-- **IntersectionObserver**: For scroll detection and active section tracking
-- **LocalStorage**: Persistent user preferences (language & theme)
+- **Custom Hooks**: `useFadeInOnScroll` for scroll-based animations.
+- **Context API**: Language and Theme management.
+- **IntersectionObserver**: For scroll detection and active section tracking.
+- **LocalStorage**: Persistent user preferences (language & theme).
 
 ## Project Structure
 ```
