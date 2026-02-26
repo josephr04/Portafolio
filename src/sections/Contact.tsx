@@ -47,9 +47,9 @@ export function Contact() {
         </div>
 
         <FadeInSection>
-          <div className="grid md:grid-cols-2 gap-8 items-start">
+          <div className="gap-8 items-start flex justify-center"> {/* For two colums use: grid md:grid-cols-2 */} 
             {/* Contact Info */}
-            <div className="space-y-6">
+            <div className="w-full max-w-md space-y-6">
               <div className="bg-gray-100/80 dark:bg-gray-800/40 backdrop-blur-sm rounded-2xl p-8 border border-gray-300 dark:border-[#30363d] hover:border-blue-500/50 transition-all duration-300">
                 <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
                   <IoIosMail className="w-6 h-6 text-blue-400" />
@@ -93,7 +93,7 @@ export function Contact() {
 
             </div>
 
-            {/* Contact Form */}
+            {/* Contact Form 
             <form 
               onSubmit={handleSubmit}
               className="bg-gray-100/80 dark:bg-gray-800/40 backdrop-blur-sm rounded-2xl p-8 border border-gray-300 dark:border-[#30363d] hover:border-blue-500/30 transition-all duration-300"
@@ -161,6 +161,7 @@ export function Contact() {
                 </button>
               </div>
             </form>
+            */}
           </div>
         </FadeInSection>
       </div>
