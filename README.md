@@ -19,11 +19,11 @@ Welcome to my personal portfolio! This project showcases my skills, projects, an
 ## Technologies Used
 
 ### Frontend
-- **React 19** with TypeScript
-- **Tailwind CSS** for styling
-- **Framer Motion** for animations
-- **React Icons** for iconography
-- **Vite** as build tool
+- **React 19** with TypeScript.
+- **Tailwind CSS** for styling.
+- **Framer Motion** for animations.
+- **React Icons** for iconography.
+- **Vite** as build tool.
 
 ### Key Libraries
 - `react-type-animation` - Typing animation effects
