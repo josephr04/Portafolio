@@ -13,6 +13,20 @@ export const Experiences = [
     ],
   },*/
   {
+    titlekey: "experience.delta2025.title",
+    businesskey: "experience.delta2025.business",
+    timekey: "experience.delta2025.time",
+    rolekey: "experience.delta2025.role",
+    descriptionkey: "experience.delta2025.description",
+    skills: [
+      "Blazor",
+      "ASP.NET Core",
+      "SQL Server",
+      "REST API",
+      "C#",
+    ],
+  },
+  {
     titlekey: "experience.hackaton2025.title",
     businesskey: "experience.hackaton2025.business",
     timekey: "experience.hackaton2025.time",

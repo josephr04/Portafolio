@@ -47,6 +47,13 @@ export const translations = {
     "experience.hackaton2025.description": "Participé en la Hackathon 2025 de Copa Airlines, donde manejé la limpieza y preprocesamiento de datos utilizando herramientas de Databricks. También realicé análisis de datos usando servicios de AWS, incluyendo S3, para extraer información relevante de los conjuntos de datos sobre aviación y apoyar la toma de decisiones dentro de mi equipo.",
     "experience.hackaton2025.skills": "Habilidades",
 
+    "experience.delta2025.title": "Práctica Laboral",
+    "experience.delta2025.business": "Petróleos Delta, S.A.",
+    "experience.delta2025.time": "Ene 2025 - Mar 2025",
+    "experience.delta2025.role": "Practicante de Desarrollo de Software",
+    "experience.delta2025.description": "Participé como practicante en el equipo de desarrollo de software, donde diseñé e implementé un módulo de cambio de contraseñas y realicé el rediseño de una aplicación web integrando una API REST. Trabajé con tecnologías como Blazor, ASP.NET Core y SQL Server para modernizar los sistemas internas de la empresa.",
+    "experience.delta2025.skills": "Habilidades",
+
     // Projects
     "projects.title": "Proyectos",
 
@@ -134,6 +141,13 @@ export const translations = {
     "experience.hackaton2025.role": "Participant",
     "experience.hackaton2025.description": "Participated in the Copa Airlines Hackathon 2025, where I handled data cleaning and preprocessing using Databricks tools. I also performed data analysis using AWS services including S3 to extract meaningful insights from aviation datasets and support data-driven decision-making in my team.",
     "experience.hackaton2025.skills": "Skills",
+
+    "experience.delta2025.title": "Software Development Internship",
+    "experience.delta2025.business": "Petróleos Delta, S.A.",
+    "experience.delta2025.time": "Jan 2025 - Mar 2025",
+    "experience.delta2025.role": "Software Development Intern",
+    "experience.delta2025.description": "Worked as a software development intern, where I designed and implemented a password management module and led the redesign of a legacy web application by integrating a REST API. Leveraged modern technologies such as Blazor, ASP.NET Core and SQL Server to modernize internal business solutions.",
+    "experience.delta2025.skills": "Skills",
 
     // Projects
     "projects.title": "Projects",
