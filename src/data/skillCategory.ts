@@ -17,6 +17,7 @@ export const skillCategories = {
     { title: "Tailwind CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
     { title: ".NET", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" },
     { title: "Flask", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" },
+    { title: "Blazor", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blazor/blazor-original.svg" },
   ],
   "databases": [
     { title: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
